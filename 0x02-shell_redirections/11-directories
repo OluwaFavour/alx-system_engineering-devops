@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d \( ! -name . -a ! -name .. \) | grep -c '/$'
+ls -Rl | grep "^d" | grep -v "^\.$\|^\.\.$" | wc -l
